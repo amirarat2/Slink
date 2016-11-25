@@ -1,6 +1,6 @@
 <?php
-define('API_KEY', 'TOKEN');
-$admin = "ADMIN";
+define('API_KEY', '271769925:AAExlMxRQ_h67H_Xog0kQ_hJrAMjMsyd5vo');
+$admin = "236829189";
 function mute($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
     $ch = curl_init();
@@ -22,14 +22,14 @@ $from = $update->message->from->id;
     $short = file_get_contents('http://yeo.ir/api.php?url='.$text);
     roonx('sendMessage',[
       'chat_id'=>$chat_id,
-      'text'=>"🔗 Your Short LInk : ".$short."\n@MuteTeam",
+      'text'=>"🔗 Your Short LInk : ".$short."\n@AMIR_ARTA",
       'parse_mode'=>'HTML'
     ]);
   }
   if(preg_match('/^\/([sS]tart)/',$text)){
 	  mute('sendMessage',[
       'chat_id'=>$chat_id,
-      'text'=>"Hi 😉👋\nIm Bot Short LInker 😃\nPlease Send Your Link 🙌\n\n@MuteTeam",
+      'text'=>"Hi 😉👋\nIm Bot Short LInker 😃\nPlease Send Your Link 🙌\n\n@AMIR_ARTA",
       'parse_mode'=>'HTML'
     ]);
   }
